@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametric CNC Coaster Creator</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- DXF Writer Browser Bundle Dependency -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full bg-slate-800 rounded-2xl p-6 shadow-2xl border border-slate-700">
+        <h1 class="text-xl font-bold text-emerald-400 mb-2">📐 CNC Coaster Creator</h1>
+        <p class="text-xs text-slate-400 mb-6">Create customized geometric coasters ready for laser cutting.</p>
+
+        <div class="space-y-4">
+            <!-- Parameter 1: Outer Size -->
+            <div>
+                <label class="block text-xs uppercase tracking-wide text-slate-400 mb-1">Coaster Size (mm)</label>
+                <input type="range" id="sizeRange" min="80" max="120" value="100" class="w-full accent-emerald-400">
+                <span id="sizeVal" class="text-xs text-emerald-300 font-mono">100mm</span>
+            </div>
+
+            <!-- Parameter 2: Corner Rounding -->
+            <div>
+                <label class="block text-xs uppercase tracking-wide text-slate-400 mb-1">Corner Rounding (Fillet Radius)</label>
+                <input type="range" id="radiusRange" min="0" max="25" value="12" class="w-full accent-emerald-400">
+                <span id="radiusVal" class="text-xs text-emerald-300 font-mono">12mm</span>
+            </div>
+
+            <!-- Parameter 3: Central Hole Size -->
+            <div>
+                <label class="block text-xs uppercase tracking-wide text-slate-400 mb-1">Center Detail Radius (mm)</label>
+                <input type="range" id="centerRange" min="10" max="30" value="20" class="w-full accent-emerald-400">
+                <span id="centerVal" class="text-xs text-emerald-300 font-mono">20mm</span>
+            </div>
+
+            <!-- Download Button -->
+            <button id="downloadBtn" class="w-full mt-4 bg-emerald-400 hover:bg-emerald-500 text-slate-950 font-bold py-3 rounded-lg transition duration-200">
+                💾 Download CAD DXF File
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
