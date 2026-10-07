@@ -9,4 +9,4 @@ A lightweight, purely frontend Web-to-CAD automation application that calculates
 
 ## 🛠️ Tech Stack
 * **Frontend:** HTML5, Tailwind CSS
-* **CAD Pipeline:** `dxf-writer` (Browser Distribution Engine Bundle)
+
